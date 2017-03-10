@@ -1,0 +1,25 @@
+button {
+  margin-top: 1em;
+}
+
+.nav-pills {
+  background-color: $colorVeryLightGrey;
+  a {
+    color: $colorDarkGrey;
+  }
+}
+
+.recentThoughts {
+  margin-left: 1em;
+}
+
+.panel-default {
+  .panel-heading {
+    background-color: $colorLightBlue;
+  }
+}
+
+.newthought {
+  width: $contentWidth;
+  margin: auto;
+}
