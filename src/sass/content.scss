@@ -22,4 +22,9 @@ button {
 .newthought {
   width: $contentWidth;
   margin: auto;
+  .formSuccess {
+    color: green;
+    font-size: 3em;
+    display: none;
+  }
 }
