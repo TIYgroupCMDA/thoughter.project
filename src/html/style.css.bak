@@ -21,7 +21,4 @@ button {
   width: 60%;
   margin: auto; }
 
-.formSuccess {
-  display: none; }
-
 /*# sourceMappingURL=style.css.map */
