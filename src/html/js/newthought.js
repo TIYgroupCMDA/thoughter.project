@@ -6,9 +6,6 @@
   // new thoughts POST url
   let postURL = 'https://thoughter.herokuapp.com/api/Thoughts';
 
-  //
-  // NOTE test code
-  //
   let loginInfo = {
     'username': 'jordan',
     'password': 'foobar'
@@ -33,21 +30,14 @@
     })
     .then(function handleResponse(response) {
       response.json().then(function handleJSON(jsonObj){
-        // console.log("Debug:  jsonObj contains: ");
-        // console.log(jsonObj);
-
         loginToken = jsonObj.id;
-        // console.log('Debug: loginToken contains: ', loginToken);
-
         authorId = jsonObj.userId;
-        // console.log('Debug: authorId contains: ', authorId);
       });
     });
   };
 
   // function to submit a new thought
-  window.nameSpace.newThoughtSubmit = function thoughtSubmit(bodyObj) {
-
+  window.nameSpace.newThoughtSubmit = function newThoughtSubmit(bodyObj) {
     fetch(postURL, {
       method: 'POST',
       headers: {
@@ -56,21 +46,13 @@
       body: JSON.stringify(bodyObj)
     }).then(function handleResponse(response){
       if (response.status > 199 && response.status < 300) {
-
-        $('button').toggleClass('btn-success');
-
-    //     .find('h1')
-    // .css('color', 'green')
-    // .after('<p>' + data.theText + '</p>');
-
+        $('.btn-success').toggleClass('formSuccess');
       }
-
-      // console.log('thoughtSubmit response object =');
-      // console.log(response);
-      console.log('thoughtSubmit response code was: ', response.status);
+      else {
+        $('.btn-danger').toggleClass('formSuccess');
+      }
     });
   };
-
 
   //variable to store login response TODO:  get rid of this variable
   let response = {};
@@ -79,7 +61,7 @@
   let content;
 
   // listen for a click event
-  $('button').on('click', function sendData(eventObj){
+  $('.btn-primary').on('click', function sendData(){
     // store the user content if there is a value
     if ($('input')[0].value) {
       content = $('input')[0].value;
@@ -91,21 +73,10 @@
     // attempt to login NOTE test code
     window.nameSpace.testLogin(loginInfo);
 
-
-
     // build body content
     let postBody = { content, authorId };
 
     // attempt to post the new thought, passing in the body content
     window.nameSpace.newThoughtSubmit(postBody);
-
-
-
   });
-
-  // NOTE testing
-  $('button').toggleClass('btn-success');
-
-  // .after('<button>' + success + '</button');
-
 }());

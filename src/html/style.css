@@ -20,9 +20,8 @@ button {
 .newthought {
   width: 60%;
   margin: auto; }
-  .newthought .formSuccess {
-    color: green;
-    font-size: 3em;
-    display: none; }
+
+.formSuccess {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
