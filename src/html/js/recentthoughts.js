@@ -3,6 +3,12 @@
 
   let fetchURL = 'https://thoughter.herokuapp.com/api/Thoughts?filter={"limit":20}';
   window.nameSpace = window.nameSpace || {};
+
+  /**
+   * getRecent is getting the the status repsonse and data for recent thought posts
+   * also will be retrieving old posts
+   * @return {getRecent} is retrieving the most recent posts on thoughter page.
+   */
   window.nameSpace.getRecent = function getRecent() {
     fetch(
       fetchURL, {
