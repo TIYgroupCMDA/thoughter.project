@@ -7,6 +7,11 @@
   let postURL = 'https://thoughter.herokuapp.com/api/Thoughts';
 
   // function to submit a new thought
+  /**
+   * [newThoughtSubmit description]
+   * @param  {Javascript Object} bodyObj Object containing content for new thought
+   * @return {void}                      Nothing is returned
+   */
   window.nameSpace.newThoughtSubmit = function newThoughtSubmit(bodyObj) {
     fetch(postURL, {
       method: 'POST',
