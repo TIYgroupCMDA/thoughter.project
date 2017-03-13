@@ -13,3 +13,15 @@ b.  use Javascript Ajax fetch() to create HTTP GET/POST messaging
 
 c.  use jQuery functions to navigate the DOM and modify the html as needed for each page
 
+
+List of Additional Tasks:
+
+1. jshint branch            
+
+2. docblock branch          
+
+3. dir restructuring branch
+
+4. readme branch    
+
+reviewed        
